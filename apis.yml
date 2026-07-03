@@ -1,0 +1,46 @@
+aid: stampli
+url: https://raw.githubusercontent.com/api-evangelist/stampli/refs/heads/main/apis.yml
+name: Stampli
+kind: company
+description: Stampli is an AI-driven accounts payable and procure-to-pay automation
+  platform (invoice capture, coding, approvals, vendor management, payments, and
+  corporate cards) that stays aligned to a company's ERP as the system of record.
+  Stampli does NOT publish a public, self-serve developer API or developer portal.
+  What Stampli markets as its "API" is a set of pre-built, in-house cloud-to-cloud
+  ERP integrations (plus on-premises "Bridge" connectors and file-based sync) that
+  Stampli operates on the customer's behalf to sync master data - invoices, vendors,
+  purchase orders, GL accounts, locations/entities, and approvals - between Stampli
+  and 70+ ERPs such as NetSuite, Sage Intacct, QuickBooks, Microsoft Dynamics, SAP,
+  Oracle, and Acumatica. Access is gated behind a sales/onboarding relationship;
+  there is no documented public REST/GraphQL/WebSocket surface, no self-service
+  authentication, no OpenAPI reference, and no published developer documentation as
+  of this catalog entry. Integrations are configured by Stampli during onboarding
+  rather than by third-party developers against an open API.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Accounts Payable
+- AP Automation
+- Procure-to-Pay
+- Invoice Management
+- Vendor Management
+- ERP Integration
+- FinTech
+- No Public API
+- Gated API
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+common:
+- type: Website
+  url: https://www.stampli.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/stampli
+- type: Integrations
+  url: https://www.stampli.com/stampli-integrations/
+- type: Documentation
+  url: https://www.stampli.com/accounting-systems-erps/
+- type: Pricing
+  url: https://www.stampli.com/pricing/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

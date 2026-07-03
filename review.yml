@@ -1,0 +1,104 @@
+aid: stampli
+name: Stampli
+review:
+  question: Does Stampli expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Stampli does not publish any public API of
+    any protocol - not REST, not GraphQL, and certainly not a WebSocket or SSE
+    server-push transport. Stampli's "API" is a set of pre-built, in-house
+    cloud-to-cloud ERP integrations (plus on-premises Bridge connectors and
+    file-based sync) that Stampli operates on the customer's behalf. There is no
+    publicly documented endpoint, message channel, or realtime surface on
+    Stampli's own platform to model in AsyncAPI.
+findings:
+  summary: |
+    Stampli does not publish a documented public WebSocket API - nor any public,
+    self-serve developer API at all. Stampli is an AI-driven accounts payable and
+    procure-to-pay automation platform. What Stampli markets as its "API" is a set
+    of managed, pre-built integrations that sync master data (invoices, vendors,
+    purchase orders, GL accounts, locations/entities, approvals) between Stampli
+    and 70+ ERPs such as NetSuite, Sage Intacct, QuickBooks, Microsoft Dynamics,
+    SAP, Oracle, and Acumatica. These integrations are built and operated in-house
+    by Stampli and configured during onboarding, not exposed to third-party
+    developers. There is no developer portal (developer.stampli.com does not
+    resolve), no published API reference or OpenAPI document, no self-service
+    authentication or sandbox, and no documented webhooks, REST, GraphQL, or
+    WebSocket surface as of the review date.
+  publicApi: |
+    No. Access to any programmatic data flow is gated behind a sales and
+    onboarding relationship. Stampli states its integrations are built in-house
+    rather than via third-party connectors or developers, and directs technical
+    inquiries to sales rather than to developer documentation.
+  transports:
+    - protocol: Managed ERP Integration (cloud-to-cloud)
+      scheme: https
+      documented: false
+      note: Pre-built connector Stampli operates to sync data with cloud ERPs (NetSuite, Sage Intacct, QuickBooks Online). Not a third-party-consumable API; no public reference.
+    - protocol: Bridge (cloud-to-on-premises)
+      scheme: n/a
+      documented: false
+      note: Executable application that moves data between on-premises ERPs (SAP S/4HANA, Sage 100) and Stampli. Internal integration mechanism, not a developer API.
+    - protocol: File integration
+      scheme: n/a
+      documented: false
+      note: Templated file-based sync for ERPs without an API/Bridge connector. Not an API.
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API reference is published on Stampli's own properties.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere for Stampli as of the review date.
+  endpointsConfirmed: []
+  endpointsModeled:
+    note: |
+      Stampli publishes no endpoint reference, so no endpoints can be confirmed.
+      The following are the logical AP/procure-to-pay resources Stampli's managed
+      integrations move between an ERP and Stampli. They are MODELED for cataloging
+      purposes only and must not be treated as a real, callable public API surface.
+    resources:
+      - Invoices
+      - Vendors
+      - Purchase Orders
+      - GL Accounts
+      - Locations / Entities (master lists)
+      - Approvals / Approval Workflows
+      - Payments
+      - Corporate Cards
+  thirdPartyClaims: |
+    Third-party API tracker profiles (e.g., apitracker.io) show speculative
+    capability flags for Stampli such as OpenAPI/Swagger, webhooks, and
+    authentication. None of these are corroborated by a public Stampli developer
+    resource, and most fields on those profiles are blank. They are therefore
+    treated as unverified and NOT recorded as confirmed capabilities here.
+sources:
+  - url: https://www.stampli.com/stampli-integrations/
+    type: Documentation
+    note: Describes API, Bridge, and File integration models; integrations built in-house; no developer API, portal, or webhooks mentioned.
+  - url: https://www.stampli.com/accounting-systems-erps/
+    type: Documentation
+    note: Pre-built cloud-to-cloud API and on-premises Bridge integrations across 70+ ERPs, managed by Stampli; directs to sales, not developer docs.
+  - url: https://www.stampli.com/pricing/
+    type: Pricing
+    note: Quote-based pricing; contact sales. No public developer/API tier.
+  - url: https://www.linkedin.com/company/stampli
+    type: LinkedIn
+    note: Company profile; procure-to-pay platform aligned to the ERP as system of record.
+  - url: https://apitracker.io/a/stampli
+    type: ThirdPartyProfile
+    note: Speculative capability flags (OpenAPI, webhooks, auth) not corroborated by any Stampli developer resource; most fields blank. Treated as unverified.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket surface exists - and no public API of any kind is documented by
+    Stampli. Stampli's programmatic data movement is via managed, in-house ERP
+    integrations gated behind sales/onboarding. No AsyncAPI document was created
+    because there is no public server-push transport (or any public endpoint) on
+    Stampli's own platform to model. The apis.yml is an honest gated / no-public-API
+    stub with common links and sourced evidence, and lists no APIs collection.
