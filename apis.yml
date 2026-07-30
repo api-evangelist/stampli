@@ -16,7 +16,18 @@ description: Stampli is an AI-driven accounts payable and procure-to-pay automat
   authentication, no OpenAPI reference, and no published developer documentation as
   of this catalog entry. Integrations are configured by Stampli during onboarding
   rather than by third-party developers against an open API.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/stampli.png
 tags:
 - Accounts Payable
 - AP Automation
