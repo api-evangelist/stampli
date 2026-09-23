@@ -1,0 +1,27 @@
+# Front Door AI Index — stampli — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: stampli
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.stampli.com
+  final_host: www.stampli.com
+  ownership: own
+  owner: stampli
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 8
+  host_score: 8
+  density: 7.94
+  words: 1008
+  tiers:
+    agentic: 0
+    core: 8
+    model: 0
+  ambiguous: 10
+  top_terms:
+    intelligence: 9
+    AI: 8
+    automation: 1
