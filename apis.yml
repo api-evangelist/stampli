@@ -49,6 +49,7 @@ tags:
 - Fintech
 - No Public API
 - Gated API
+- Procurement
 tags_raw:
 - Accounts Payable
 - AP Automation
@@ -59,6 +60,7 @@ tags_raw:
 - FinTech
 - No Public API
 - Gated API
+- Procurement
 created: '2026-07-03'
 modified: '2026-07-03'
 specificationVersion: '0.23'
